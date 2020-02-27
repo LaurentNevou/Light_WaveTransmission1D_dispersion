@@ -93,7 +93,7 @@ idx=find(abs(lambda-lambda0)==min(abs(lambda-lambda0)));
 subplot(2,2,1,'fontsize',FS)
 hold on;grid on;
 
-plot(z*1e6,n(:,idx),'b','linewidth',LW)
+plot(z*1e6,abs(n(:,idx)),'b','linewidth',LW)
 
 xlim([0 z(end)]*1e6)
 ylim([0 4.5])
