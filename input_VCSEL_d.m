@@ -8,13 +8,15 @@ nR=3;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % import dispersion
 
-M      = importdata('index_data/GaAs.csv',',').data;
+M      = importdata('index_data/GaAs.csv',',');
+M      = M.data;
 M(:,1) = M(:,1)*1e-6;
 nM     = interp1(M(:,1),M(:,2),lambda);
 kM     = interp1(M(:,1),M(:,3),lambda);
 nkGaAs = nM + kM*1i;
 
-M      = importdata('index_data/AlAs.csv',',').data;
+M      = importdata('index_data/AlAs.csv',',');
+M      = M.data;
 M(:,1) = M(:,1)*1e-6;
 nM     = interp1(M(:,1),M(:,2),lambda);
 kM     = interp1(M(:,1),M(:,3),lambda);
