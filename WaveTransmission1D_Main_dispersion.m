@@ -47,12 +47,12 @@ for j=1:length(t)
     zz(1) = t(1);
     zv{1} = 0:dz:t(1); 
     z     = zv{1};
-    n     = repmat((zv{j}'*0+1),[1 length(lambda)] ) .* nt(j,:);
+    n     = repmat((zv{j}'*0+1),[1 length(lambda)] ) .* repmat(nt(j,:),[length(zv{j}') 1]);
   else
     zz(j) = zz(end)+t(j);
     zv{j} = (zz(end-1)+dz):dz:zz(end);
     z     = [ z  zv{j} ];
-    n     = [ n  ; repmat((zv{j}'*0+1),[1 length(lambda)] ) .* nt(j,:)  ];
+    n     = [ n  ; repmat((zv{j}'*0+1),[1 length(lambda)] ) .* repmat(nt(j,:),[length(zv{j}') 1])  ];
   end
 
 end
