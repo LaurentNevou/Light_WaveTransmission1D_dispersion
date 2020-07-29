@@ -5,6 +5,8 @@
 % Data can be imported from the little database and/or from elsewhere.
 % Take care that the wavelength range in the code MUST BE covered by the matarial
 % data used.
+% data source: https://refractiveindex.info/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear all
 close all
